@@ -1,0 +1,67 @@
+.animation-left{
+
+    animation: slide-left 2s ease-in-out both;
+
+}
+@keyframes slide-left{
+
+from{
+
+    transform: translateX(300px);
+    opacity: 0;
+
+}
+to{
+
+
+    transform: translateX(0);
+    opacity: 1;
+
+}
+
+}
+.animation-right{
+
+    animation: slide-right 2s ease-in-out both;
+
+}
+@keyframes slide-right{
+
+    from{
+    
+        transform: translateX(-300px);
+        opacity: 0;
+    
+    }
+    to{
+    
+    
+        transform: translateX(0);
+        opacity: 1;
+    
+    }
+    
+}
+
+.animation-imges{
+    animation:  slide-imges 3s ease-in-out both;
+}
+
+@keyframes slide-imges{
+
+    from{
+    
+        transform: scale(0);
+        opacity: 0;
+    
+    }
+    to{
+    
+    
+        transform: translateX(1);
+        opacity: 1;
+    
+    }
+    
+    }
+

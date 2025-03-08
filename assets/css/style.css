@@ -1,0 +1,570 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* style all */
+a{
+    text-decoration: none;
+    
+}
+.container{
+    width: 85%;
+    margin: 5rem auto;
+}
+h1{
+    text-align: center;
+    color: #f2ab4f;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+/* Scroll to top style */
+.parent-scroll-to-top{
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    border: solid 2px #2f75bf;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 10;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.scroll-to-top{
+    /* position: absolute; */
+    background: #64caf2;
+    /* position: absolute; */
+    font-size: 30px;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation-name: scrollRevers;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes scroll{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes scrollRevers{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+/* Header start */
+header .nav-staky{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+header .nav-staky .search{
+    position: relative;
+}
+header .nav-staky .search input{
+    max-width: 200px;
+    background: #00000033;
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+header .nav-staky .search input:focus{
+    background: #fff;
+    box-shadow: 0 0 10px #87cfeb;
+    border: solid 1px  #87cfebb6 ;
+}
+header .nav-staky .search i{
+    position: absolute;
+    top: 4px ;
+    right: 7px;
+    scale: 1.3;
+    transform: scale(0.9);
+    color: #64caf2;
+    padding: 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+header .nav-fxid{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background:#d8cccc;
+    width: 100%;
+    z-index: 10;
+}
+header .nav-fxid ul{
+    list-style: none;
+    display: flex;
+   justify-content: center;
+}
+header .nav-fxid ul li{
+    padding: 10px;
+    margin: 10px 20px;
+}
+header .nav-fxid ul li a{
+    font-size: 20px;
+    padding: 5px;
+    transition: 0.3s;
+    color: beige;
+}
+header .nav-fxid ul li a:hover{
+    color: skyblue;
+}
+/* Header End */
+
+/* Section One Start */
+#section-one .container .right,
+#section-one .container .left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0 8rem 0;
+    opacity: 0;
+}
+#section-one .container .right img,
+#section-one .container .left img{
+    width: 500px;
+}
+#section-one .container .left .text-content{
+    margin-right: 100px;
+    padding: 10px;
+}
+#section-one .container .right .text-content{
+    margin-left: 100px;
+    padding: 10px;
+}
+#section-one .container .right .text-content h2,
+#section-one .container .left .text-content h2{
+    padding: 15px 0;
+    font-weight: 500;
+    color: #70b0ddbd;
+}
+#section-one .container .right .text-content p,
+#section-one .container .left .text-content p{
+    font-weight: 500;
+    color: #2f75bf;
+}
+/* Section One End */
+/* Section two Start */
+.q{
+    position: relative;
+    width: 60%;
+    margin: 5rem auto;
+}
+.q .title h2{
+    background: #64caf2;
+    color: #fff;
+    padding: 10px;
+}
+.q .title .blus{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 39px;
+    font-weight: 700;
+    background: #2f75bf;
+    color: #fff;
+    padding: 0 20px;
+    border-bottom-left-radius: 30px;
+    cursor: pointer;
+}
+.q p{
+    background: #64caf26c;
+    padding: 10px;
+    height: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+.q .show-pregraph-qustion{
+    opacity: 1;
+}
+/* Section two End */
+/* Section three Start */
+#section-three .cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 5rem 0;
+}
+#section-three .card{
+    background: #ebebeb;
+    width: 300px;
+    padding: 10px;
+    margin: 2rem auto;
+}
+#section-three .card .icon{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+#section-three .card h2{
+    margin: 1rem 0;
+    color: #2f75bf;
+}
+#section-three .card >p{
+    margin: 1rem 0;
+    color: #87cfeb;
+}
+#section-three .card div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+#section-three .card div img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+/* Section three End */
+/* Section fore Start */
+#section-fore > div > h1{
+    margin: 5rem;
+}
+#section-fore .youtuobe-Veduos{
+    position: relative;
+    text-align: center;
+}
+#section-fore .youtuobe-Veduos iframe{
+    animation-name: animat;
+    animation-duration: 2s;
+}
+#section-fore .nextVeduo{
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    margin :10px auto ;
+    border: solid 2px #2f75bf;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+#section-fore .nextVeduo:hover{
+    background: #87cfeb;
+    color: #fff;
+    
+
+}
+@keyframes animat{
+    0%{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-200px);
+        opacity: 1; 
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#section-fore .massegeContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#section-fore .masseg{
+    background: #eeeeee;
+    width: 300px;
+    text-align: center;
+    padding:20px 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+#section-fore .masseg img{
+    width: 50px;
+}
+#section-fore .masseg img:not(#section-fore > div > div.massegeContainer > div:nth-child(2) > img){
+    height: 50px;
+    border-radius: 50%;
+}
+#section-fore .masseg h3{
+    color: #2f75bf;
+    margin: 10px 0;
+}
+#section-fore .masseg p{
+    color: #64caf2;
+    margin: 10px 0;
+}
+/* Section fore End*/
+/* foater Start */
+
+#foater{
+    background:url(../imgs/bg-header-desktop.png) no-repeat center/cover;
+}
+#foater .logo img{
+    scale: 0.8;
+    margin-top: 20px;
+}
+#foater .links{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 3rem;
+}
+#foater .links ul{
+    list-style: none;
+    margin: 0 auto;
+}
+#foater .links ul li{
+    padding: 10px 20px;
+    margin: 15px auto;
+    border-top:solid 1px #2f75bf;
+    border-bottom:solid 1px #2f75bf;
+    transition: all 0.5s;
+}
+#foater .links ul li:hover{
+    background: #64caf2;
+}
+#foater .links ul li a{
+    padding: 10px 20px;
+    color: #2f75bf;
+    transition:all 0.5s;
+}
+#foater .links ul li a:hover{
+    color: #fff;
+}
+footer{
+    height: 88px;
+}
+footer p{
+    background: #2f75bf;
+    color: #fff;
+    text-align: center;
+}
+footer p a{
+    color: #5ab3d6;
+}
+footer p a:hover{
+    color: #98defa;
+}
+@media(max-width:1024px){
+    /* Responsev Section one */
+    #section-one .container .right,
+    #section-one .container .left{
+        flex-direction: column;
+        text-align: center;
+    } 
+    #section-one .container .right img,
+    #section-one .container .left img{
+        margin-top: 20px;
+    }
+    #section-one .container .left .text-content,
+    #section-one .container .right .text-content{
+        margin: 3rem 0;
+        padding: 0 5rem;        
+    }
+    /* Responsev Section Three */
+    #section-three .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+    #section-three .card{
+        width: 350px;
+    }
+    /* Responsev Section fore*/
+    #section-fore .masseg{
+        width: 250px;
+    }
+}
+@media(max-width:820px){
+    /* Responsev Section one */
+    #section-one .container .right img,
+    #section-one .container .left img{
+         width: 400px;
+    }   
+    /* Responsev Section two  */
+    .q{
+        width: 70%;
+    }
+    /* Responsev Section Three */
+    #section-three .cards{
+        grid-template-columns:repeat(1,1fr);
+    }
+    #section-three .card{
+        width: 450px;
+    }
+    /* Responsev Section fore */
+    #section-fore .massegeContainer{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #section-fore .masseg{
+        width: 500px;
+        margin: 2rem auto;
+    }
+    /* Responsev Foater */
+    #foater .links ul li{
+        padding:10px; 
+    }
+    #foater .links ul li a{
+        padding: 10px;
+    }
+}
+@media(max-width:700px){
+    /* Responsev header */
+    header .nav-staky .logo img{
+        width: 150px;
+    }
+}
+@media(max-width:500px){
+    /* Responsev All */
+    h1{
+        font-size:20px;
+        font-weight: 600;
+        margin: 0;
+    }
+    /* Responsev header */
+    header .nav-staky .logo img{
+        width: 100px;
+    }
+    header .nav-staky{
+        padding: 20px 10px;
+    }
+    header .nav-fxid ul li{
+        margin: 20px 0;
+    }
+    /* Responsev Section one */
+    #section-one .container .right,
+    #section-one .container .left{
+    display: flex;
+    margin:4rem 2rem;
+    }
+    #section-one .container .right img,
+    #section-one .container .left img{
+         width: 300px;
+    } 
+    #section-one .container .left .text-content,
+    #section-one .container .right .text-content{
+        margin:1rem 0;
+        padding: 0;
+    }
+     /* Responsev Section two  */
+    .q{
+        width: 95%;
+    }
+    .q .title h2{
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .q .title .blus{
+        font-size: 35px;
+    }
+     /* Responsev Section Three */
+    #section-three .card{
+        width: 300px;
+    }
+    /* youtuobe Animation Responsev */
+     /* Responsev Section fore */
+     #section-fore > div > h1{
+
+        margin: 5rem 0;
+
+    }
+    #section-fore .youtuobe-Veduos iframe{
+        width: 350px;
+        height: 300px;
+        animation-name: animat;
+        animation-duration: 2s;
+    }
+    @keyframes animat{
+        0%{
+            transform: translateX(300px);
+            opacity: 0;
+        }
+        50%{
+            transform: translateX(-50px);
+            opacity: 1; 
+        }
+        100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+     /* Responsev Section fore */
+    #section-fore .masseg{
+        width: 300px;
+        margin: 2rem auto;
+    }
+    /* Responsev Foater */
+    #foater{
+        background:url(../imgs/bg-header-mobile.png) no-repeat center/cover;
+    }
+    #foater .links{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #foater .links ul li{
+        padding: 10px 50px;
+    }
+    #foater .links ul li a{
+        padding: 10px 50px;
+    }
+    footer{
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+
+}
+@media(max-width:344px){
+    /* Responsev Section one */
+    #section-one .container .right .text-content h2,
+    #section-one .container .left .text-content h2{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    #section-one .container .right .text-content p,
+    #section-one .container .left .text-content p{
+        font-weight: 300;
+        color: #2f75bf;
+    }
+     /* Responsev Section two  */
+     .q{
+        width: 98%;
+    }
+    .q .title h2{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .q .title .blus{
+        font-size: 31px;
+    }
+     /* youtuobe Animation Responsev */
+     #section-fore .youtuobe-Veduos iframe{
+        width: 300px;
+        height: 250px;
+     }
+     /* Responsev Foater */
+    
+    #foater .links ul li{
+        padding: 10px 30px;
+    }
+    #foater .links ul li a{
+        padding: 10px 30px;
+    }
+    footer{
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+}
